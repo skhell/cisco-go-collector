@@ -4,7 +4,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/skhell/cisco-go-collector)](https://goreportcard.com/report/github.com/skhell/cisco-go-collector)
 [![Release](https://img.shields.io/github/v/release/skhell/cisco-go-collector)](https://github.com/skhell/cisco-go-collector/releases)
 
-A simple portable and fast CLI tool that connects to Cisco NX-OS and IOS-XE devices over SSH, runs commands defined in a CSV file and saves the output as organized plain-text files.
+a simple portable and fast CLI tool that connects to Cisco NX-OS and IOS-XE devices over SSH, runs commands defined in a CSV file and saves the output as organized plain-text files.
 
 Built for engineers and architects who need repeatable CLI evidence collection without installing Python and operate complicate scripts, dial with Ansible or any other framework overhead.
 

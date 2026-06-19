@@ -44,20 +44,16 @@ nfpms:
       - rpm
     bindir: /usr/bin
 
-brews:
+homebrew_casks:
   - name: ciscocollector
     repository:
       owner: skhell
       name: homebrew-cisco-go-collector
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
-    directory: Formula
+    directory: Casks
     homepage: https://github.com/skhell/cisco-go-collector
     description: Portable Cisco CLI collector written in Go for fast, CSV-driven configuration and command output collection.
     license: MIT
-    install: |
-      bin.install "ciscocollector"
-    test: |
-      system "#{bin}/ciscocollector", "--version"
 
 checksum:
   name_template: checksums.txt
