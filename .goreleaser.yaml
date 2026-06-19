@@ -37,7 +37,7 @@ nfpms:
     vendor: Tia Zanella
     homepage: https://github.com/skhell/cisco-go-collector
     maintainer: Tia Zanella <tia@skhell.com>
-    description: CSV-driven SSH command collector for Cisco NX-OS and IOS-XE devices.
+    description: Portable Cisco CLI collector written in Go for fast, CSV-driven configuration and command output collection.
     license: MIT
     formats:
       - deb
@@ -52,7 +52,7 @@ brews:
       token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
     directory: Formula
     homepage: https://github.com/skhell/cisco-go-collector
-    description: CSV-driven SSH command collector for Cisco NX-OS and IOS-XE devices.
+    description: Portable Cisco CLI collector written in Go for fast, CSV-driven configuration and command output collection.
     license: MIT
     install: |
       bin.install "ciscocollector"
