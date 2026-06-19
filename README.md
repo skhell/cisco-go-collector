@@ -165,6 +165,8 @@ See [SECURITY.md](SECURITY.md) for full details and responsible disclosure instr
 
 ## Feedback
 
+If `ciscocollector` saved you time and simplified your activities it was worth building.
+
 - Star the project on [GitHub](https://github.com/skhell/cisco-go-collector)
 - Report bugs or request features in [Issues](https://github.com/skhell/cisco-go-collector/issues)
 - [Buy me a coffee](https://buymeacoffee.com/skhell), or a snack for my Schnauzer Tyson via [GitHub Sponsors](https://github.com/sponsors/skhell)

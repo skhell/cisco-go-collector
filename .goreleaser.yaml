@@ -1,0 +1,81 @@
+version: 2
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: ciscocollector
+    main: ./cmd/ciscocollector
+    binary: ciscocollector
+    env:
+      - CGO_ENABLED=0
+    goos:
+      - linux
+      - windows
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    ldflags:
+      - -s -w -X main.Version={{.Version}}
+
+archives:
+  - id: default
+    name_template: "{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}"
+    format_overrides:
+      - goos: windows
+        formats:
+          - zip
+    files:
+      - LICENSE
+      - README.md
+
+nfpms:
+  - id: packages
+    package_name: ciscocollector
+    vendor: Tia Zanella
+    homepage: https://github.com/skhell/cisco-go-collector
+    maintainer: Tia Zanella <tia@skhell.com>
+    description: CSV-driven SSH command collector for Cisco NX-OS and IOS-XE devices.
+    license: MIT
+    formats:
+      - deb
+      - rpm
+    bindir: /usr/bin
+
+brews:
+  - name: ciscocollector
+    repository:
+      owner: skhell
+      name: homebrew-cisco-go-collector
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: https://github.com/skhell/cisco-go-collector
+    description: CSV-driven SSH command collector for Cisco NX-OS and IOS-XE devices.
+    license: MIT
+    install: |
+      bin.install "ciscocollector"
+    test: |
+      system "#{bin}/ciscocollector", "--version"
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  sort: asc
+  use: github
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
+      - Merge pull request
+      - Merge branch
+
+release:
+  github:
+    owner: skhell
+    name: cisco-go-collector
+  draft: false
+  prerelease: auto
