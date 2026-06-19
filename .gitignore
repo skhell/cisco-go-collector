@@ -1,0 +1,13 @@
+# MacOS junk
+.DS_Store
+
+# Build output
+ciscocollector.*
+dist/
+
+# Runtime output directory and csv test
+*.csv
+/out/
+
+# Test files
+*.txt
