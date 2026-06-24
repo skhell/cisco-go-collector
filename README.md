@@ -3,6 +3,8 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/skhell/cisco-go-collector/main/LICENSE)
 [![Go Report Card](https://goreportcard.com/badge/github.com/skhell/cisco-go-collector)](https://goreportcard.com/report/github.com/skhell/cisco-go-collector)
 [![Release](https://img.shields.io/github/v/release/skhell/cisco-go-collector)](https://github.com/skhell/cisco-go-collector/releases)
+[![Cisco Developed](https://static.production.devnetcloud.com/codeexchange/assets/images/cisco-developed.svg)](https://developer.cisco.com/codeexchange/github/repo/skhell/cisco-go-collector)
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/skhell/cisco-go-collector)
 
 a simple portable and fast CLI tool that connects to Cisco NX-OS and IOS-XE devices over SSH, runs commands defined in a CSV file and saves the output as organized plain-text files.
 
